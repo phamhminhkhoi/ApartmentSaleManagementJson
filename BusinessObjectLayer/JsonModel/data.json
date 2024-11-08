@@ -81,6 +81,18 @@
       "Bathrooms": 2,
       "CategoryId": 4,
       "CategoryName": null
+    },
+    {
+      "PropertyId": 40,
+      "PropertyName": "Vinhomes Grand Park",
+      "Location": "Long Thanh My Quan 9 TP Thu Duc",
+      "Description": "Luxury penthouse with center city view",
+      "Price": 1000000000,
+      "SizeSqFt": 1200,
+      "Bedrooms": 3,
+      "Bathrooms": 2,
+      "CategoryId": 5,
+      "CategoryName": null
     }
   ],
   "RoleUsers": [

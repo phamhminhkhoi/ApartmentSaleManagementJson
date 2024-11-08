@@ -233,10 +233,8 @@
 
                     <td>
                         <div class="btn-group" role="group">
-                            <a asp-page="Edit" asp-route-id="@item.PropertyId.ToString()" class="btn btn-warning">
-    Edit (ID: @item.PropertyId.ToString())
-</a>
-                                            <a asp-page="Delete" asp-route-id="@item.PropertyId" class="btn btn-danger">Delete</a>
+                            <a asp-page="Edit" asp-route-id="@item.PropertyId" class="btn btn-warning">Edit</a>
+                            <a asp-page="Delete" asp-route-id="@item.PropertyId" class="btn btn-danger">Delete</a>
                         </div>
                     </td>
                 </tr>
