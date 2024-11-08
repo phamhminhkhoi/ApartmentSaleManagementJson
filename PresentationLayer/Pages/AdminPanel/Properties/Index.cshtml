@@ -180,9 +180,6 @@
                 <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName == "/AdminPanel/Members/Index" ? "active" : "")" asp-page="/AdminPanel/Members/Index">
                     <i class="fas fa-users mr-2"></i> Members
                 </a>
-                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName == "/AdminPanel/Transactions/Index" ? "active" : "")" asp-page="/AdminPanel/Transactions/Index">
-                    <i class="fas fa-exchange-alt mr-2"></i> Transactions
-                </a>
                 <a class="nav-link" asp-page="/Login">
                     <i class="fas fa-sign-out-alt mr-2"></i> Logout
                 </a>
@@ -214,8 +211,6 @@
                 <th>@Html.DisplayNameFor(model => model.Property[0].Bedrooms)</th>
                 <th>@Html.DisplayNameFor(model => model.Property[0].Bathrooms)</th>
                 <th>@Html.DisplayNameFor(model => model.Property[0].CategoryName)</th>
-
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -231,12 +226,7 @@
                     <td>@Html.DisplayFor(modelItem => item.Bathrooms)</td>
                     <td>@Html.DisplayFor(modelItem => item.CategoryName)</td>
 
-                    <td>
-                        <div class="btn-group" role="group">
-                            <a asp-page="Edit" asp-route-id="@item.PropertyId" class="btn btn-warning">Edit</a>
-                            <a asp-page="Delete" asp-route-id="@item.PropertyId" class="btn btn-danger">Delete</a>
-                        </div>
-                    </td>
+                    
                 </tr>
             }
         </tbody>

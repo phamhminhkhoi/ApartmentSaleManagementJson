@@ -93,6 +93,18 @@
       "Bathrooms": 2,
       "CategoryId": 5,
       "CategoryName": null
+    },
+    {
+      "PropertyId": 41,
+      "PropertyName": "Park Riverside",
+      "Location": "Bung Ung Thoang",
+      "Description": "Luxury house",
+      "Price": 1000000000,
+      "SizeSqFt": 1200,
+      "Bedrooms": 3,
+      "Bathrooms": 2,
+      "CategoryId": 2,
+      "CategoryName": null
     }
   ],
   "RoleUsers": [

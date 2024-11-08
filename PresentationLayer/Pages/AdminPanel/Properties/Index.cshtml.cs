@@ -25,6 +25,16 @@ namespace PresentationLayer.Pages.Properties
         public async Task OnGetAsync(string? searchTerm)
         {
             LoadProp();
+            if (searchTerm == null) { return; }
+            var searchedProp = new List<Property>();
+            foreach (var item in _propertyService.GetAllProperties())
+            {
+                if (item.PropertyName.ToLower().Contains(searchTerm.ToLower()) || item.Location.ToLower().Contains(searchTerm.ToLower()))
+                {
+                    searchedProp.Add(item);
+                }
+            }
+            Property = searchedProp;
         }
 
         private void LoadProp()

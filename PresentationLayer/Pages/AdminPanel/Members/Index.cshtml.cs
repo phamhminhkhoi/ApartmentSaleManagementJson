@@ -5,16 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using BusinessObjectLayer;
+using BusinessObjectLayer.JsonModel;
 using ServiceLayer.Interfaces;
+using ServiceLayer.JsonInterfaces;
 
 namespace PresentationLayer.Pages.Members
 {
     public class IndexModel : PageModel
     {
-        private readonly IMemberService _memberService;
+        private readonly IMemberJsonService _memberService;
 
-        public IndexModel(IMemberService memberService)
+        public IndexModel(IMemberJsonService memberService)
         {
             _memberService = memberService;
         }
@@ -23,7 +24,7 @@ namespace PresentationLayer.Pages.Members
 
         public async Task OnGetAsync(string searchTerm)
         {
-            var listToShow = _memberService.GetMembers();
+            var listToShow = _memberService.GetAllMembers();
             var checkedRole = new List<Member>();
             foreach (var member in listToShow) 
             {
