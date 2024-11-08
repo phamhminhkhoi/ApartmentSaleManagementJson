@@ -1,0 +1,159 @@
+{
+  "PropertyCategories": [
+    {
+      "CategoryId": 1,
+      "CategoryName": "Apartment"
+    },
+    {
+      "CategoryId": 2,
+      "CategoryName": "House"
+    },
+    {
+      "CategoryId": 3,
+      "CategoryName": "Condominium"
+    },
+    {
+      "CategoryId": 4,
+      "CategoryName": "Townhouse"
+    },
+    {
+      "CategoryId": 5,
+      "CategoryName": "Penthouse"
+    }
+  ],
+  "Properties": [
+    {
+      "PropertyId": 16,
+      "PropertyName": "Luxury Apartment",
+      "Location": "Downtown",
+      "Description": "A modern and luxurious apartment located in the heart of downtown, offering stunning views and premium amenities.",
+      "Price": 200000.00,
+      "SizeSqFt": 1200,
+      "Bedrooms": 3,
+      "Bathrooms": 2,
+      "CategoryId": 1
+    },
+    {
+      "PropertyId": 17,
+      "PropertyName": "Family House",
+      "Location": "Suburb",
+      "Description": "A spacious family home in a peaceful suburban area, featuring a large garden, multiple bedrooms, and a welcoming community.",
+      "Price": 300000.00,
+      "SizeSqFt": 2500,
+      "Bedrooms": 4,
+      "Bathrooms": 3,
+      "CategoryId": 2
+    },
+    {
+      "PropertyId": 18,
+      "PropertyName": "Stylish Condo",
+      "Location": "City Center",
+      "Description": "A contemporary and stylish condo located in the city center, ideal for those seeking a modern urban lifestyle.",
+      "Price": 150000.00,
+      "SizeSqFt": 900,
+      "Bedrooms": 2,
+      "Bathrooms": 1,
+      "CategoryId": 3
+    },
+    {
+      "PropertyId": 35,
+      "PropertyName": "Landmark 81",
+      "Location": "HCM",
+      "Description": "Penthouse to live",
+      "Price": 10000000000.00,
+      "SizeSqFt": 1200,
+      "Bedrooms": 3,
+      "Bathrooms": 2,
+      "CategoryId": 5
+    },
+    {
+      "PropertyId": 39,
+      "PropertyName": "Vinhome Ocean Park",
+      "Location": "HN",
+      "Description": "Great apartment complex",
+      "Price": 10000000.00,
+      "SizeSqFt": 800,
+      "Bedrooms": 3,
+      "Bathrooms": 2,
+      "CategoryId": 4
+    }
+  ],
+  "RoleUsers": [
+    {
+      "RoleId": 1,
+      "RoleName": "Admin"
+    },
+    {
+      "RoleId": 2,
+      "RoleName": "Buyer"
+    },
+    {
+      "RoleId": 4,
+      "RoleName": "Manager"
+    },
+    {
+      "RoleId": 3,
+      "RoleName": "Seller"
+    }
+  ],
+  "Members": [
+    {
+      "MemberId": 1,
+      "Email": "admin@gmail.com",
+      "DollarPoint": null,
+      "Password": "admin123",
+      "FullName": "Admin User",
+      "RoleId": 1
+    },
+    {
+      "MemberId": 2,
+      "Email": "minhtu@gmail.com",
+      "DollarPoint": null,
+      "Password": "123",
+      "FullName": "Pham Tran Minh Tu",
+      "RoleId": 2
+    },
+    {
+      "MemberId": 3,
+      "Email": "thanhhai@gmail.com",
+      "DollarPoint": null,
+      "Password": "123",
+      "FullName": "Nguyen Thanh Hai",
+      "RoleId": 2
+    },
+    {
+      "MemberId": 4,
+      "Email": "huynhson@gmail.com",
+      "DollarPoint": null,
+      "Password": "123",
+      "FullName": "Huynh Ngoc Son",
+      "RoleId": 3
+    },
+    {
+      "MemberId": 5,
+      "Email": "levi@gmail.com",
+      "DollarPoint": null,
+      "Password": "123",
+      "FullName": "Pham Thi Le Vi",
+      "RoleId": 3
+    }
+  ],
+  "Transactions": [
+    {
+      "TransactionId": 7,
+      "TransactionDate": "2024-10-27T00:00:00.000",
+      "BuyerId": 2,
+      "SellerId": 4,
+      "TotalAmount": 200000.00
+    }
+  ],
+  "TransactionDetails": [
+    {
+      "TransactionDetailId": 10,
+      "TransactionId": 7,
+      "PropertyId": 16,
+      "Quantity": 1,
+      "Price": 200000.00
+    }
+  ]
+}
