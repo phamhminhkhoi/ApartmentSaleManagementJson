@@ -15,7 +15,7 @@ namespace RepositoryLayer.JsonImplements
 
         public PropertyJsonRepository()
         {
-            _propertyDao = new PropertyDAO();  // Initialize DAO instance
+            _propertyDao = new PropertyDAO();  
         }
 
         public List<Property> GetAllProperties()

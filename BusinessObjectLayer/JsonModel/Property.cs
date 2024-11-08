@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace BusinessObjectLayer.JsonModel
 {
     public class Property
-    {
+    {   
         public int PropertyId { get; set; }
         public string PropertyName { get; set; }
         public string Location { get; set; }
@@ -17,5 +17,6 @@ namespace BusinessObjectLayer.JsonModel
         public int Bedrooms { get; set; }
         public int Bathrooms { get; set; }
         public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     }
 }

@@ -213,6 +213,8 @@
                 <th>@Html.DisplayNameFor(model => model.Property[0].SizeSqFt)</th>
                 <th>@Html.DisplayNameFor(model => model.Property[0].Bedrooms)</th>
                 <th>@Html.DisplayNameFor(model => model.Property[0].Bathrooms)</th>
+                <th>@Html.DisplayNameFor(model => model.Property[0].CategoryName)</th>
+
                 <th>Actions</th>
             </tr>
         </thead>
@@ -227,10 +229,14 @@
                     <td>@Html.DisplayFor(modelItem => item.SizeSqFt)</td>
                     <td>@Html.DisplayFor(modelItem => item.Bedrooms)</td>
                     <td>@Html.DisplayFor(modelItem => item.Bathrooms)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CategoryName)</td>
+
                     <td>
                         <div class="btn-group" role="group">
-                            <a asp-page="Edit" asp-route-id="@item.PropertyId" class="btn btn-warning">Edit</a>
-                            <a asp-page="Delete" asp-route-id="@item.PropertyId" class="btn btn-danger">Delete</a>
+                            <a asp-page="Edit" asp-route-id="@item.PropertyId.ToString()" class="btn btn-warning">
+    Edit (ID: @item.PropertyId.ToString())
+</a>
+                                            <a asp-page="Delete" asp-route-id="@item.PropertyId" class="btn btn-danger">Delete</a>
                         </div>
                     </td>
                 </tr>

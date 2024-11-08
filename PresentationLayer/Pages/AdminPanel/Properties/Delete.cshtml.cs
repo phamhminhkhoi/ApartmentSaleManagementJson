@@ -5,16 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using BusinessObjectLayer;
+using BusinessObjectLayer.JsonModel;
 using ServiceLayer.Interfaces;
+using ServiceLayer.JsonInterfaces;
 
 namespace PresentationLayer.Pages.Properties
 {
     public class DeleteModel : PageModel
     {
-        private readonly IPropertyService _propertyService;
+        private readonly IPropertyJsonService _propertyService;
 
-        public DeleteModel(IPropertyService propertyService)
+        public DeleteModel(IPropertyJsonService propertyService)
         {
             this._propertyService = propertyService;
         }
@@ -53,7 +54,7 @@ namespace PresentationLayer.Pages.Properties
             if (property != null)
             {
                 Property = property;
-                _propertyService.DeleteProperty(Property.PropertyId);    
+                _propertyService.RemoveProperty(Property.PropertyId);    
             }
 
             return RedirectToPage("./Index");

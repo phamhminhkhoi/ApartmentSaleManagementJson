@@ -31,7 +31,8 @@
       "SizeSqFt": 1200,
       "Bedrooms": 3,
       "Bathrooms": 2,
-      "CategoryId": 1
+      "CategoryId": 1,
+      "CategoryName": null
     },
     {
       "PropertyId": 17,
@@ -42,7 +43,8 @@
       "SizeSqFt": 2500,
       "Bedrooms": 4,
       "Bathrooms": 3,
-      "CategoryId": 2
+      "CategoryId": 2,
+      "CategoryName": null
     },
     {
       "PropertyId": 18,
@@ -53,7 +55,8 @@
       "SizeSqFt": 900,
       "Bedrooms": 2,
       "Bathrooms": 1,
-      "CategoryId": 3
+      "CategoryId": 3,
+      "CategoryName": null
     },
     {
       "PropertyId": 35,
@@ -64,7 +67,8 @@
       "SizeSqFt": 1200,
       "Bedrooms": 3,
       "Bathrooms": 2,
-      "CategoryId": 5
+      "CategoryId": 5,
+      "CategoryName": null
     },
     {
       "PropertyId": 39,
@@ -75,7 +79,8 @@
       "SizeSqFt": 800,
       "Bedrooms": 3,
       "Bathrooms": 2,
-      "CategoryId": 4
+      "CategoryId": 4,
+      "CategoryName": null
     }
   ],
   "RoleUsers": [
@@ -141,7 +146,7 @@
   "Transactions": [
     {
       "TransactionId": 7,
-      "TransactionDate": "2024-10-27T00:00:00.000",
+      "TransactionDate": "2024-10-27T00:00:00",
       "BuyerId": 2,
       "SellerId": 4,
       "TotalAmount": 200000.00

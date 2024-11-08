@@ -10,7 +10,7 @@ namespace DataAccessLayer.JsonDAO
 {
     public class PropertyDAO
     {
-        private readonly string _jsonFilePath = "C:\\Users\\phamk\\Desktop\\PRN221\\ApartmentSaleManagement RazorPage\\ApartmentSaleManagementRazor\\BusinessObjectLayer\\JsonModel\\data.json";
+        private readonly string _jsonFilePath = "..\\BusinessObjectLayer\\JsonModel\\data.json";
         private SaleManagementData _data;
 
         public PropertyDAO()
@@ -50,6 +50,10 @@ namespace DataAccessLayer.JsonDAO
         public void AddProperty(Property newProperty)
         {
             _data.Properties ??= new List<Property>();
+
+            int newId = _data.Properties.Max(p => p.PropertyId) + 1;
+            newProperty.PropertyId = newId;
+
             _data.Properties.Add(newProperty);
             SaveData();
         }
@@ -67,6 +71,7 @@ namespace DataAccessLayer.JsonDAO
                 property.Bedrooms = updatedProperty.Bedrooms;
                 property.Bathrooms = updatedProperty.Bathrooms;
                 property.CategoryId = updatedProperty.CategoryId;
+                property.CategoryName = updatedProperty.CategoryName;
                 SaveData();
             }
         }
@@ -80,5 +85,7 @@ namespace DataAccessLayer.JsonDAO
                 SaveData();
             }
         }
+
+        
     }
 }

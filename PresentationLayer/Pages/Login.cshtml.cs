@@ -1,15 +1,16 @@
-using BusinessObjectLayer;
+using BusinessObjectLayer.JsonModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ServiceLayer.Interfaces;
+using ServiceLayer.JsonInterfaces;
 
 namespace PresentationLayer.Pages
 {
     public class LoginModel : PageModel
     {
-        private IMemberService _memberService { get; set; }
+        private IMemberJsonService _memberService { get; set; }
 
-        public LoginModel(IMemberService memberService)
+        public LoginModel(IMemberJsonService memberService)
         {
             this._memberService = memberService;
         }

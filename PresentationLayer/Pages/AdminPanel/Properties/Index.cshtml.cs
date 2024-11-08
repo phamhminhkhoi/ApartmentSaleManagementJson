@@ -13,10 +13,11 @@ namespace PresentationLayer.Pages.Properties
     public class IndexModel : PageModel
     {
         private readonly IPropertyJsonService _propertyService;
-
-        public IndexModel(IPropertyJsonService propertyService)
+        private readonly ICategoryJsonService _categoryService;
+        public IndexModel(IPropertyJsonService propertyService, ICategoryJsonService categoryService)
         {
             _propertyService = propertyService;
+            _categoryService = categoryService;
         }
 
         public IList<Property> Property { get; set; } = default!;
@@ -24,21 +25,29 @@ namespace PresentationLayer.Pages.Properties
         public async Task OnGetAsync(string? searchTerm)
         {
             LoadProp();
-            //if (searchTerm == null) { return; }
-            //var searchedProp = new List<Property>();
-            //foreach (var item in _propertyService.GetAllProperties())
-            //{
-            //    if (item.PropertyName.ToLower().Contains(searchTerm.ToLower()) || item.Location.ToLower().Contains(searchTerm.ToLower()))
-            //    {
-            //        searchedProp.Add(item);
-            //    }
-            //}
-            //Property = searchedProp;
         }
 
         private void LoadProp()
         {
             Property = _propertyService.GetAllProperties();
+            var ListToShow = new List<Property>();
+            foreach (var property in Property) 
+            {
+                var category = _categoryService.GetCategoryById(property.CategoryId);
+                var prop = new Property
+                {
+                    Bathrooms = property.Bathrooms,
+                    Bedrooms = property.Bedrooms,
+                    Description = property.Description,
+                    Location = property.Location,
+                    Price = property.Price,
+                    SizeSqFt = property.SizeSqFt,
+                    PropertyName = property.PropertyName,
+                    CategoryName = category.CategoryName,
+                };
+                ListToShow.Add(prop);
+            }
+            Property = ListToShow;
         }
     }
 }

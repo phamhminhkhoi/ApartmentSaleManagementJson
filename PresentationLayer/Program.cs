@@ -23,8 +23,15 @@ namespace PresentationLayer
 			builder.Services.AddScoped<ITransactionDetailService, TransactionDetailService>();
 
 
-            builder.Services.AddSingleton<IPropertyJsonRepository, PropertyJsonRepository>();
-            builder.Services.AddSingleton<IPropertyJsonService, PropertyJsonService>();
+            builder.Services.AddScoped<IPropertyJsonRepository, PropertyJsonRepository>();
+            builder.Services.AddScoped<IPropertyJsonService, PropertyJsonService>();
+
+            builder.Services.AddScoped<IMemberJsonRepository, MemberJsonRepository>();
+            builder.Services.AddScoped<IMemberJsonService, MemberJsonService>();
+
+            builder.Services.AddScoped<ICategoryJsonRepository, CategoryJsonRepository>();
+            builder.Services.AddScoped<ICategoryJsonService, CategoryJsonService>();
+
             builder.Services.AddSession();
 
 
